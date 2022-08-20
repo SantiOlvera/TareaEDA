@@ -10,6 +10,8 @@ package EDA;
  */
 public class Tarea1 {
     public static int edit(String s1, String s2, int cont){
+        if(s1==null || s2==null)
+            return -1;
         if(s1.length()==0 || s2.length()==0)
             return cont+s1.length()+s2.length();
         if(s1.charAt(0)==s2.charAt(0))
@@ -44,5 +46,17 @@ public class Tarea1 {
         String s9="jueveebes";
         String s10="jueves";
         System.out.println(edit(s9,s10,0));
+        
+        String s11="beesjuebetp";
+        String s12="jueves";
+        System.out.println(edit(s11,s12,0));
+        
+        String s13=null;
+        String s14=null;
+        System.out.println(edit(s13,s14,0));
+        
+        String s15="el nniño";
+        String s16=" el";
+        System.out.println(edit(s15,s16,0));
     }
 }
